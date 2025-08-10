@@ -133,7 +133,7 @@ This README explains, end‑to‑end, how our macOS LAPS solution works and how 
 
 ### B) Optional: Remove current GUI user from `admin`
 
-- Upload the `` as a **separate, one‑time** Intune script:
+- Upload the script (`admin_removal.sh`) as a **separate, one‑time** Intune script:
   - Run as signed-in user: **No**.
   - It detects the active GUI user (`/dev/console`) and removes them from `admin`, while **preserving** `root`, `LAPS_Admin`, and system accounts.
 
