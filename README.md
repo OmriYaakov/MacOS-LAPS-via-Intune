@@ -245,7 +245,7 @@ az keyvault secret show \
 When you retire a Mac or roll back this solution:
 
 - **Delete** the device’s secret from Key Vault (or keep for audit, as policy dictates).
-- Run the one‑time **removal script** (in repo) to delete `LAPS_Admin`, clear `HiddenUsersList`, and remove the local `jq` binary if we installed it.
+- Delete `LAPS_Admin`, clear `HiddenUsersList`, and remove the local `jq` binary if we installed it.
 
 ---
 
