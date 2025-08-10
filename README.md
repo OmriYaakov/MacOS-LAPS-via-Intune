@@ -26,7 +26,7 @@ This README explains, end‑to‑end, how our macOS LAPS solution works and how 
 ## Architecture Overview
 
 - **macOS device** runs a shell script as **root** (via Intune system context).
-- Script ensures `` exists (JSON parser), creates/rotates local hidden admin, then requests an **OAuth token** from **Azure AD** using our App Registration (client ID/secret).
+- Script ensures `jq` exists (JSON parser), creates/rotates local hidden admin, then requests an **OAuth token** from **Azure AD** using our App Registration (client ID/secret).
 - Script **writes the local admin password** to **Azure Key Vault** as a **secret** named after the device (see *Secret naming* below).
 - Helpdesk retrieves the secret from Key Vault when needed.
 
