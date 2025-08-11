@@ -72,7 +72,7 @@ log "Azure token has successfully been obtained."
 
 # Check if password is stored in KeyVault
 VAULT_URL="https://$KEYVAULT_NAME.vault.azure.net"
-COMPUTER_NAME=$(scutil --get ComputerName | tr " ’'" '-')
+COMPUTER_NAME=$(scutil --get ComputerName | tr " ’'()" '-')
 
 log "Check if password is stored in keyvault for $COMPUTER_NAME."
 EXISTING_SECRET=$(curl -s -X GET -H "Authorization: Bearer $ACCESS_TOKEN" "$VAULT_URL/secrets/$COMPUTER_NAME?api-version=7.3" | jq -r '.value')
